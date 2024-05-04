@@ -9,7 +9,7 @@ function Home() {
     event.preventDefault();
 
     // Envoi des données du formulaire à l'API
-    fetch("http://localhost:3000/auth/login", {
+    fetch("https://apps-celest-api.kas9uk.easypanel.host/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,11 +21,16 @@ function Home() {
     })
       .then((response) => {
         if (response.ok) {
-          window.location.href = "/dashboard"; // Redirection vers la page de tableau de bord
-        } else {
-          // Afficher le message d'erreur provenant de l'API
+          // Si la connexion réussit, extraire le token de la réponse
           response.json().then((data) => {
-            // Mettre à jour l'état de l'erreur
+            const token = data.token;
+            // Stocker le token dans le local storage
+            localStorage.setItem("token", token);
+            // Rediriger vers la page de tableau de bord
+            window.location.href = "/dashboard";
+          });
+        } else {
+          response.json().then((data) => {
             setErrorMessage(data.message);
           });
         }
@@ -36,7 +41,7 @@ function Home() {
   };
 
   return (
-    <div className="flex w-screen">
+    <div className="flex w-screen h-screen">
       <div className="flex-auto bg-[#1B1834] h-screen max-w-screen-lg hidden lg:flex justify-center items-center">
         <img
           src="/img/Logo_Blanc_Celest.png"

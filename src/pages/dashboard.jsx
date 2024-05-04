@@ -13,7 +13,6 @@ function Dashboard() {
         setEvents(eventsData);
       } catch (error) {
         console.error(error);
-        // Handle error state or show error message to the user
       }
     }
     getEventsData();
@@ -21,7 +20,7 @@ function Dashboard() {
 
   return (
     <div>
-      <Header />
+      <Header title={"Dashboard"} />
       <div className="flex flex-wrap gap-5 p-5">
         {events.map((event) => (
           <CardEvent

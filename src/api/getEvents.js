@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://localhost:3000";
+const API_URL = "https://apps-celest-api.kas9uk.easypanel.host";
 
 export async function getEvents() {
   try {

@@ -11,7 +11,7 @@ function Signup() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // Envoi des données du formulaire à l'API
-    fetch("http://localhost:3000/auth/signup", {
+    fetch("https://apps-celest-api.kas9uk.easypanel.host/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
