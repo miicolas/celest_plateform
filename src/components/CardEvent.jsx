@@ -1,6 +1,6 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-function CardEvent({ name, date, places, status }) {
+function CardEvent({ name, date, places, status, id_name }) {
   return (
     <div
       className={`border rounded-lg p-4 mb-4 w-80 ${status === "close" ? "opacity-50 cursor-not-allowed" : ""}`}
@@ -13,12 +13,15 @@ function CardEvent({ name, date, places, status }) {
       >
         {status}
       </p>
-      <button
-        className={` bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 ${status === "close" ? "cursor-not-allowed" : ""}`}
-      >
-        {" "}
-        Participer
-      </button>
+
+      <Link to={`/event/${id_name}`}>
+        <button
+          className={` bg-blue-500 text-white px-4 py-2 rounded-lg mt-2 ${status === "close" ? "cursor-not-allowed" : ""}`}
+        >
+          {" "}
+          Participer
+        </button>
+      </Link>
     </div>
   );
 }
