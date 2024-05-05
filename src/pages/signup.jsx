@@ -49,20 +49,14 @@ function Signup() {
         />
       </div>
       <div className=" flex justify-center items-center p-10 bg-gray-50 flex-col flex-1">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-          Inscription
-        </h1>
-        {/* Affichage du message d'erreur */}
+        <h1 className="text-2xl font-bold text-gray-900 ">Inscription</h1>
         {errorMessage && (
           <div className="text-red-500 text-sm mt-2">{errorMessage}</div>
         )}
-        <form
-          className="max-w-52 lg:max-w-full p-9"
-          onSubmit={handleFormSubmit}
-        >
+        <form className="w-full p-9" onSubmit={handleFormSubmit}>
           <label
             htmlFor="instagram"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900"
           >
             Instagram
           </label>
@@ -71,13 +65,13 @@ function Signup() {
             id="instagram"
             value={instagram}
             onChange={(e) => setInstagram(e.target.value)}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="@Celest"
             required
           />
           <label
             htmlFor="name"
-            className="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mt-4 mb-2 text-sm font-medium text-gray-900"
           >
             Nom
           </label>
@@ -86,13 +80,13 @@ function Signup() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Doe"
             required
           ></input>
           <label
             htmlFor="firstname"
-            className="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mt-4 mb-2 text-sm font-medium text-gray-900"
           >
             Prénom
           </label>
@@ -101,13 +95,13 @@ function Signup() {
             id="firstname"
             value={firstname}
             onChange={(e) => setFirstname(e.target.value)}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             placeholder="John"
             required
           ></input>
           <label
             htmlFor="password"
-            className="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mt-4 mb-2 text-sm font-medium text-gray-900 "
           >
             Password
           </label>
@@ -116,14 +110,14 @@ function Signup() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             placeholder="********"
             required
           />
-          <div className="flex justify-between items-center mt-4">
+          <div className="flex justify-between items-center px-4 py-6">
             <label
               htmlFor="conditions"
-              className="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block w-full text-sm font-medium text-gray-900 "
             >
               J'accepte{" "}
               <Link to="/mentions-legales" className="underline">
@@ -134,14 +128,14 @@ function Signup() {
             <input
               type="checkbox"
               id="conditions"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-fit p-2.5 "
               required
             ></input>
           </div>
 
           <button
             type="submit"
-            className="bg-[#1B1834] text-white text-sm font-medium rounded-lg w-full p-2.5 mt-4"
+            className="bg-[#1B1834] text-white text-sm font-medium rounded-lg w-full p-2.5 "
           >
             Inscription
           </button>
