@@ -5,6 +5,7 @@ import Signup from "../pages/signup.jsx";
 import Dashboard from "../pages/dashboard.jsx";
 import Admin from "../pages/admin.jsx";
 import Profile from "../pages/profile.jsx";
+import Event from "../pages/event.jsx";
 
 function Layout() {
   return (
@@ -16,6 +17,7 @@ function Layout() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/event/:id_name" element={<Event />} />
       </Routes>
     </div>
   );
