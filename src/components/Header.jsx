@@ -24,7 +24,7 @@ function Header({ title }) {
   }, []); // Empty dependency array to run effect only once on mount
 
   return (
-    <header className="flex justify-between h-fit p-5">
+    <header className="flex justify-between h-fit p-5 bg-gray-50">
       <div className="flex gap-10 items-center">
         <Link to="/dashboard">
           <img
