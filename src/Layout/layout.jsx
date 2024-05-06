@@ -9,7 +9,7 @@ import Event from "../pages/event.jsx";
 
 function Layout() {
   return (
-    <div className="">
+    <div>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
